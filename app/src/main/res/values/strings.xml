@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Giphy Search</string>
+    <string name="search_hint">Search for gifs!</string>
+    <string name="no_data_available">No gifs found!</string>
+</resources>
