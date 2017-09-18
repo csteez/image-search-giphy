@@ -15,6 +15,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.example.cstead.imagegallery.Constants;
 import com.example.cstead.imagegallery.GiphyAccessor;
+import com.example.cstead.imagegallery.GiphyToast;
 import com.example.cstead.imagegallery.ImageGalleryAdapter;
 import com.example.cstead.imagegallery.Models.Gif;
 import com.example.cstead.imagegallery.R;
@@ -82,27 +83,17 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView.OnScrollListener scrollListener = new RecyclerView.OnScrollListener()
     {
-        int pastVisiblesItems, visibleItemCount, totalItemCount;
-        private boolean loading = true;
-
         @Override
         public void onScrolled(RecyclerView recyclerView, int dx, int dy)
         {
-            if(dy > 0) //check for scroll down
-            {
-                visibleItemCount = mLayoutManager.getChildCount();
-                totalItemCount = mLayoutManager.getItemCount();
-                pastVisiblesItems = mLayoutManager.findFirstVisibleItemPosition();
+            if (dy <=0) return;
+            int visibleItemCount = mLayoutManager.getChildCount();
+            int totalItemCount = mLayoutManager.getItemCount();
+            int pastVisiblesItems = mLayoutManager.findFirstVisibleItemPosition();
 
-                if (loading)
-                {
-                    if ( (visibleItemCount + pastVisiblesItems) >= totalItemCount)
-                    {
-                        loading = false;
-                        TextView noContentView = (TextView) findViewById(R.id.noContentView);
-                        noContentView.setVisibility(View.VISIBLE);
-                    }
-                }
+            if ((visibleItemCount + pastVisiblesItems) >= totalItemCount)
+            {
+                GiphyToast.showToast(mContext);
             }
         }
     };
@@ -155,7 +146,6 @@ public class MainActivity extends AppCompatActivity {
             mRecyclerView.setVisibility(View.VISIBLE);
             mErrorView.setVisibility(View.GONE);
         }
-
     }
 
 }

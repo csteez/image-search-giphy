@@ -73,6 +73,7 @@ public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapte
         public void onClick(View view) {
             int position = getAdapterPosition();
             if(position != RecyclerView.NO_POSITION) {
+                GiphyToast.killToast();
                 Gif gif = mGifList.get(position);
                 Intent intent = new Intent(mContext, GifDetailActivity.class);
                 intent.putExtra(GifDetailActivity.EXTRA_GIF, gif);
