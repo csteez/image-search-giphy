@@ -25,7 +25,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private EditText mSearchTextView;
-    private static Context mContext;
+    private Context mContext;
     private GiphyAccessor mGiphyAccessor;
     private TextView mErrorView;
     private RequestQueue mRequestQueue;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         createRequestQueue();
         mGiphyAccessor = new GiphyAccessor(Constants.API_KEY, Constants.MAX_GIFS, mContext, mRequestQueue);
 
-        getTrendingGifs();
+        getTrendingGifs(false);
     }
 
     private void setupRecyclerView() {
@@ -93,13 +93,13 @@ public class MainActivity extends AppCompatActivity {
 
             if ((visibleItemCount + pastVisiblesItems) >= totalItemCount)
             {
-                GiphyToast.showToast(mContext);
+                GiphyToast.showToast(mContext, Constants.NO_CONTENT);
             }
         }
     };
 
     private void getGifsByUserInput(String input) {
-        if (input != null && input != "") {
+        if (input != null && input.trim().length() > 0) {
             mGiphyAccessor.getGifsByInput(input, new GiphyAccessor.VolleyCallback() {
                 @Override
                 public void onSuccess(List<Gif> gifList) {
@@ -119,9 +119,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+        if (input.trim().length() == 0) {
+            getTrendingGifs(true);
+        }
     }
 
-    private void getTrendingGifs() {
+    private void getTrendingGifs(final boolean showToast) {
         mGiphyAccessor.getTrendingGifs(new GiphyAccessor.VolleyCallback() {
             @Override
             public void onSuccess(List<Gif> gifList) {
@@ -129,6 +132,9 @@ public class MainActivity extends AppCompatActivity {
                 ImageGalleryAdapter adapter = new ImageGalleryAdapter(mContext, gifList,
                         (MainActivity) mContext);
                 mRecyclerView.setAdapter(adapter);
+                if (showToast) {
+                    GiphyToast.showToast(mContext, Constants.GETTING_TRENDING);
+                }
             }
             @Override
             public void onError(String message) {

@@ -9,4 +9,6 @@ public class Constants {
     public static final int MAX_GIFS = 100;
     public static final String ACCEPT_HEADER_VALUE = "image/*";
     public static final String ACCEPT_HEADER = "Accept";
+    public static final String NO_CONTENT = "No more content :(";
+    public static final String GETTING_TRENDING = "Getting trending gifs!";
 }

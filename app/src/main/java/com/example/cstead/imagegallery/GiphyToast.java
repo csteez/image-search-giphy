@@ -9,11 +9,10 @@ import android.widget.Toast;
 
 public class GiphyToast {
     private static Toast mToast;
-    private static final String NO_CONTENT = "No more content :(";
 
-    public static void showToast(Context context) {
+    public static void showToast(Context context, String message) {
         if (mToast == null || !mToast.getView().isShown()) {
-            mToast = Toast.makeText(context, NO_CONTENT, Toast.LENGTH_SHORT);
+            mToast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
             mToast.show();
         }
     }
