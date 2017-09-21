@@ -1,4 +1,4 @@
-package com.example.cstead.imagegallery;
+package com.example.cstead.giphysearch;
 
 import android.content.Context;
 
@@ -12,8 +12,8 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.cstead.imagegallery.Models.Gif;
-import com.example.cstead.imagegallery.Models.GifCollection;
+import com.example.cstead.giphysearch.Models.Gif;
+import com.example.cstead.giphysearch.Models.GifCollection;
 
 import org.json.JSONObject;
 

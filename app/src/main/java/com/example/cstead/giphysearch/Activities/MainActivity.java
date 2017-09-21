@@ -1,4 +1,4 @@
-package com.example.cstead.imagegallery.Activities;
+package com.example.cstead.giphysearch.Activities;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -13,12 +13,12 @@ import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.example.cstead.imagegallery.Constants;
-import com.example.cstead.imagegallery.GiphyAccessor;
-import com.example.cstead.imagegallery.GiphyToast;
-import com.example.cstead.imagegallery.GiphyAdapter;
-import com.example.cstead.imagegallery.Models.Gif;
-import com.example.cstead.imagegallery.R;
+import com.example.cstead.giphysearch.Constants;
+import com.example.cstead.giphysearch.GiphyAccessor;
+import com.example.cstead.giphysearch.GiphyToast;
+import com.example.cstead.giphysearch.GiphyAdapter;
+import com.example.cstead.giphysearch.Models.Gif;
+import com.example.cstead.giphysearch.R;
 
 import java.util.List;
 

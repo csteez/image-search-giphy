@@ -1,4 +1,4 @@
-package com.example.cstead.imagegallery.Models;
+package com.example.cstead.giphysearch.Models;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

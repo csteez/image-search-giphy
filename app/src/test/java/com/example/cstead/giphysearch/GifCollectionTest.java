@@ -1,8 +1,8 @@
-package com.example.cstead.imagegallery;
+package com.example.cstead.giphysearch;
 
-import com.example.cstead.imagegallery.Models.Gif;
-import com.example.cstead.imagegallery.Models.GifCollection;
-import com.example.cstead.imagegallery.Models.Images;
+import com.example.cstead.giphysearch.Models.Gif;
+import com.example.cstead.giphysearch.Models.GifCollection;
+import com.example.cstead.giphysearch.Models.Images;
 
 import org.junit.Test;
 

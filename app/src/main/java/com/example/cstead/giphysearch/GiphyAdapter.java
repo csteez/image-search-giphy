@@ -1,4 +1,4 @@
-package com.example.cstead.imagegallery;
+package com.example.cstead.giphysearch;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,9 +11,9 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.load.model.LazyHeaders;
-import com.example.cstead.imagegallery.Activities.GifDetailActivity;
-import com.example.cstead.imagegallery.Activities.MainActivity;
-import com.example.cstead.imagegallery.Models.Gif;
+import com.example.cstead.giphysearch.Activities.GifDetailActivity;
+import com.example.cstead.giphysearch.Activities.MainActivity;
+import com.example.cstead.giphysearch.Models.Gif;
 
 import java.util.List;
 

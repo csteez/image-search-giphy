@@ -1,4 +1,4 @@
-package com.example.cstead.imagegallery.Models;
+package com.example.cstead.giphysearch.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

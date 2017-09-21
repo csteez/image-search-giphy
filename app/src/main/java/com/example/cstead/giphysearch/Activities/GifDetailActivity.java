@@ -1,4 +1,4 @@
-package com.example.cstead.imagegallery.Activities;
+package com.example.cstead.giphysearch.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,9 +9,9 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.load.model.LazyHeaders;
-import com.example.cstead.imagegallery.Constants;
-import com.example.cstead.imagegallery.Models.Gif;
-import com.example.cstead.imagegallery.R;
+import com.example.cstead.giphysearch.Constants;
+import com.example.cstead.giphysearch.Models.Gif;
+import com.example.cstead.giphysearch.R;
 
 /**
  * Created by cstead on 9/4/17.

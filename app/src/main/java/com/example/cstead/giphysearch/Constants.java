@@ -1,4 +1,4 @@
-package com.example.cstead.imagegallery;
+package com.example.cstead.giphysearch;
 
 /**
  * Created by chstead on 9/10/17.

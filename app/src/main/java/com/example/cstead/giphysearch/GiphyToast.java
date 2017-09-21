@@ -1,4 +1,4 @@
-package com.example.cstead.imagegallery;
+package com.example.cstead.giphysearch;
 
 import android.content.Context;
 import android.widget.Toast;
