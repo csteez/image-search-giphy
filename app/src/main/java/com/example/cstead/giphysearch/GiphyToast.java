@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 /**
- * Created by chstead on 9/17/17.
+ * Created by cstead on 9/17/17.
  */
 
 public class GiphyToast {
