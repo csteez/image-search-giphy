@@ -21,29 +21,29 @@ import java.util.List;
  * Created by cstead on 9/9/17.
  */
 
-public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapter.MyViewHolder> {
+public class GiphyAdapter extends RecyclerView.Adapter<GiphyAdapter.MyViewHolder> {
     private List<Gif> mGifList;
     private Context mContext;
     private MainActivity mMainActivity;
 
-    public ImageGalleryAdapter(Context context, List<Gif> gifList, MainActivity activity) {
+    public GiphyAdapter(Context context, List<Gif> gifList, MainActivity activity) {
         mContext = context;
         mGifList = gifList;
         mMainActivity = activity;
     }
 
     @Override
-    public ImageGalleryAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public GiphyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View photoView = inflater.inflate(R.layout.item_photo, parent, false);
-        ImageGalleryAdapter.MyViewHolder viewHolder =
-                new ImageGalleryAdapter.MyViewHolder(photoView);
+        GiphyAdapter.MyViewHolder viewHolder =
+                new GiphyAdapter.MyViewHolder(photoView);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ImageGalleryAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(GiphyAdapter.MyViewHolder holder, int position) {
         Gif gif = mGifList.get(position);
         ImageView imageView = holder.mPhotoImageView;
 

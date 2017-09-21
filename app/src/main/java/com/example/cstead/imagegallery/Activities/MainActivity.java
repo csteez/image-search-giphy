@@ -16,7 +16,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.cstead.imagegallery.Constants;
 import com.example.cstead.imagegallery.GiphyAccessor;
 import com.example.cstead.imagegallery.GiphyToast;
-import com.example.cstead.imagegallery.ImageGalleryAdapter;
+import com.example.cstead.imagegallery.GiphyAdapter;
 import com.example.cstead.imagegallery.Models.Gif;
 import com.example.cstead.imagegallery.R;
 
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                         toggleVisibility(true);
                     } else {
                         toggleVisibility(false);
-                        ImageGalleryAdapter adapter = new ImageGalleryAdapter(mContext, gifList,
+                        GiphyAdapter adapter = new GiphyAdapter(mContext, gifList,
                                 (MainActivity) mContext);
                         mRecyclerView.setAdapter(adapter);
                     }
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(List<Gif> gifList) {
                 toggleVisibility(false);
-                ImageGalleryAdapter adapter = new ImageGalleryAdapter(mContext, gifList,
+                GiphyAdapter adapter = new GiphyAdapter(mContext, gifList,
                         (MainActivity) mContext);
                 mRecyclerView.setAdapter(adapter);
                 if (showToast) {
